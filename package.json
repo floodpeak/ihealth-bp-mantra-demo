@@ -1,0 +1,14 @@
+{
+  "name": "ihealth-bp-mantra-demo",
+  "private": false,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "mantra-core": "^1.5.0",
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-mounter": "^1.2.0"
+  }
+}
