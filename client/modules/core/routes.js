@@ -20,8 +20,8 @@ export default function (injectDeps, {FlowRouter}) {
       mount(MainLayoutCtx, {
         content: () => (
           <div>
-            Hey, Kevin<Avatar src="https://avatars3.githubusercontent.com/u/1761809?v=3&s=460" />, Let us
-            <RaisedButton label="fly" /> from here
+            Hey, Kevin<Avatar src="https://avatars3.githubusercontent.com/u/1761809?v=3&s=460" />, Let's
+            <RaisedButton label="fly" /> from here. <br/>Yes, I am flying with you now
 
             <List>
               <ListItem primaryText="Measure Blood Pressure" leftIcon={<ContentInbox />} />
