@@ -2,4 +2,9 @@
 
 # step
 1. npm install
-2. meteor
+2. meteor run android-device
+
+# todo list
+1. measure blood pressure using BP3L
+2. blood pressure info Item creating by StoryBook
+3. show blood pressure history
