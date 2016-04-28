@@ -1,0 +1,493 @@
+bogon:ihealth-bp-mantra-demo zhouhongfeng$ meteor run android-device
+[[[[[ ~/Develop/Github/ihealth-bp-mantra-demo ]]]]]
+
+=> Started proxy.                             
+=> Started MongoDB.                           
+=> Meteor 1.3.2.4 is available. Update this project with 'meteor update'.
+                                                                                   
+WARNING: You are testing your app on a remote device. For the mobile app to be able to connect to the local server, make sure your device is on the same network, and that the network configuration allows clients to talk to each other (no client isolation).
+=> Started your app.                          
+                                              
+=> App running at: http://localhost:3000/     
+=> Errors executing Cordova commands:         
+                                              
+   While running Cordova app for platform Android with options --device:
+   Error: Command failed: /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/cordova/run --device
+   Note: Some input files use or override a deprecated API.
+   Note: Recompile with -Xlint:deprecation for details.
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:8: error: package com.ihealth.plugin.base does not exist
+   import com.ihealth.plugin.base.A1InsSet;
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:9: error: package com.ihealth.plugin.base does not exist
+   import com.ihealth.plugin.base.BaseManager;
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:10: error: package com.ihealth.plugin.base does not exist
+   import com.ihealth.plugin.base.LogUtils;
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:65: error: cannot find symbol
+   BaseManager.getInstance().init(mContext);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:72: error: cannot find symbol
+   BaseManager.getInstance().destory();
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:77: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_ZOREING);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:78: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_ZOREOVER);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:79: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_ANGLE);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:80: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_MEASURE);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:81: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_PRESSURE);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:82: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_RESULT);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:83: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_OFFLINE_NUM);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:84: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_OFFLINE_DATA);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:85: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_ERROR);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:86: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_BATTERY);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:87: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_FUNCTION_INFO);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:88: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_ENBLE_OFFLINE);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:89: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_DISENBLE_OFFLINE);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:90: error: cannot find symbol
+   intentFilter.addAction(A1InsSet.MSG_BP_STOP);
+   ^
+   symbol:   variable A1InsSet
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:91: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_IHEALTH_IDPS);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:92: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_DISCOVER_DEVICE);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:93: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_DISCOVER_FINISHED);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:94: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_IHEALTH_CONNECTING);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:95: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_IHEALTH_DISCONNECT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:96: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_IHEALTH_CONNECTED);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:97: error: cannot find symbol
+   intentFilter.addAction(BaseManager.MSG_IHEALTH_CONNECTIONFAIL);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:108: error: cannot find symbol
+   LogUtils.log_debug(TAG, "action:" + action);
+   ^
+   symbol:   variable LogUtils
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:111: error: cannot find symbol
+   int req = BaseManager.getInstance().startDiscovery(appsecret, BaseManager.TYPE_BP5_BIT | BaseManager.TYPE_BP3L_BIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:111: error: cannot find symbol
+   int req = BaseManager.getInstance().startDiscovery(appsecret, BaseManager.TYPE_BP5_BIT | BaseManager.TYPE_BP3L_BIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:111: error: cannot find symbol
+   int req = BaseManager.getInstance().startDiscovery(appsecret, BaseManager.TYPE_BP5_BIT | BaseManager.TYPE_BP3L_BIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:112: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:122: error: cannot find symbol
+   int req = BaseManager.getInstance().stopDiscovery(appsecret, BaseManager.TYPE_BP5_BIT | BaseManager.TYPE_BP3L_BIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:122: error: cannot find symbol
+   int req = BaseManager.getInstance().stopDiscovery(appsecret, BaseManager.TYPE_BP5_BIT | BaseManager.TYPE_BP3L_BIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:122: error: cannot find symbol
+   int req = BaseManager.getInstance().stopDiscovery(appsecret, BaseManager.TYPE_BP5_BIT | BaseManager.TYPE_BP3L_BIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:123: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:131: error: cannot find symbol
+   int req = BaseManager.getInstance().checkSecret(appsecret);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:132: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:133: error: cannot find symbol
+   String str = BaseManager.getInstance().getConnectedDevice(BaseManager.TYPE_BP5 + BaseManager.TYPE_BP3L);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:133: error: cannot find symbol
+   String str = BaseManager.getInstance().getConnectedDevice(BaseManager.TYPE_BP5 + BaseManager.TYPE_BP3L);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:133: error: cannot find symbol
+   String str = BaseManager.getInstance().getConnectedDevice(BaseManager.TYPE_BP5 + BaseManager.TYPE_BP3L);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:143: error: cannot find symbol
+   if(BaseManager.getInstance().getBp5Control(mac) != null){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:155: error: cannot find symbol
+   }else if(BaseManager.getInstance().getBp3lControl(mac) != null){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:168: error: cannot find symbol
+   int req = BaseManager.getInstance().connectDevice(appsecret, mac);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:169: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:181: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:194: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:198: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:211: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:225: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:229: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:242: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:246: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:259: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:263: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:276: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:280: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:295: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:298: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:312: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:315: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:325: error: cannot find symbol
+   int req = BaseManager.getInstance().disconnectDevice(appsecret, mac, BaseManager.TYPE_BP5);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:325: error: cannot find symbol
+   int req = BaseManager.getInstance().disconnectDevice(appsecret, mac, BaseManager.TYPE_BP5);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:326: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:328: error: cannot find symbol
+   BaseManager.getInstance().removeBp3l(mac);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:329: error: cannot find symbol
+   BaseManager.getInstance().removeBp5(mac);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:346: error: cannot find symbol
+   error(callbackContext, mac, TYPE_BP, BaseManager.MSG_NEED_WAIT);
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:350: error: cannot find symbol
+   if(BaseManager.MSG_OK == req){
+   ^
+   symbol:   variable BaseManager
+   location: class BpManagerCordova
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:483: error: package A1InsSet does not exist
+   if(A1InsSet.MSG_BP_ZOREING.equals(action)) {
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:484: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:485: error: cannot find symbol
+   String name = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:500: error: package A1InsSet does not exist
+   } else if(A1InsSet.MSG_BP_ZOREOVER.equals(action)) {
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:501: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:502: error: cannot find symbol
+   String name = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:517: error: package A1InsSet does not exist
+   } else if(A1InsSet.MSG_BP_MEASURE.equals(action)) {
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:518: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:519: error: cannot find symbol
+   String str = intent.getStringExtra(A1InsSet.MSG_BP_MEASURE_EXTRA);
+   ^
+   symbol: variable A1InsSet
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:524: error: package A1InsSet does not exist
+   } else if(A1InsSet.MSG_BP_PRESSURE.equals(action)) {
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:525: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:526: error: cannot find symbol
+   String name = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:527: error: cannot find symbol
+   byte[] bs = intent.getByteArrayExtra(A1InsSet.MSG_BP_PRESSURE_EXTRA);
+   ^
+   symbol: variable A1InsSet
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:543: error: package A1InsSet does not exist
+   } else if(A1InsSet.MSG_BP_RESULT.equals(action)){
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:544: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:545: error: cannot find symbol
+   byte[] bs = intent.getByteArrayExtra(A1InsSet.MSG_BP_RESULT_EXTRA);
+   ^
+   symbol: variable A1InsSet
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:546: error: cannot find symbol
+   String name = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:578: error: package A1InsSet does not exist
+   } else if(A1InsSet.MSG_BP_ERROR.equals(action)){
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:579: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:580: error: cannot find symbol
+   String name = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:581: error: cannot find symbol
+   int error = intent.getIntExtra(A1InsSet.MSG_BP_ERROR_EXTRA, 0);
+   ^
+   symbol: variable A1InsSet
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:597: error: package BaseManager does not exist
+   } else if(BaseManager.MSG_DISCOVER_DEVICE.equals(action)){
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:598: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:599: error: cannot find symbol
+   String type = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:612: error: package BaseManager does not exist
+   } else if(BaseManager.MSG_IHEALTH_CONNECTING.equals(action)){
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:613: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:626: error: package BaseManager does not exist
+   } else if(BaseManager.MSG_IHEALTH_CONNECTED.equals(action)){
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:627: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:628: error: cannot find symbol
+   String type = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:642: error: package A1InsSet does not exist
+   } else if(A1InsSet.MSG_BP_OFFLINE_NUM.equals(action)){
+   ^
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:643: error: cannot find symbol
+   String mac = intent.getStringExtra(BaseManager.MSG_IHEALTH_MAC);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:644: error: cannot find symbol
+   String name = intent.getStringExtra(BaseManager.MSG_IHEALTH_TYPE);
+   ^
+   symbol: variable BaseManager
+   /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/src/com/ihealth/plugin/BpManagerCordova.java:645: error: cannot find symbol
+   int num = intent.getIntExtra(A1InsSet.MSG_BP_OFFLINE_NUM_EXTRA, 0);
+   ^
+   symbol: variable A1InsSet
+   Note: Some input files use or override a deprecated API.
+   Note: Recompile with -Xlint:deprecation for details.
+   Note: Some input files use unchecked or unsafe operations.
+   Note: Recompile with -Xlint:unchecked for details.
+   100 errors
+   
+   FAILURE: Build failed with an exception.
+   
+   * What went wrong:
+   Execution failed for task ':compileDebugJavaWithJavac'.
+   > Compilation failed; see the compiler error output for details.
+   
+   * Try:
+   Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+   Error code 1 for command: /Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/gradlew with args:
+   cdvBuildDebug,-b,/Users/zhouhongfeng/Develop/Github/ihealth-bp-mantra-demo/.meteor/local/cordova-build/platforms/android/build.gradle,-PcdvBuildArch=arm,-Dorg.gradle.daemon=true,-Pandroid.useDeprecatedNdk=true undefined
+   at ChildProcess.exitCallback (/tools/utils/processes.js:151:23)
+   at ChildProcess.emit (events.js:98:17)
+   at Process.ChildProcess._handle.onexit (child_process.js:820:12)
+
+/Users/zhouhongfeng/.meteor/packages/templating/.1.1.8.jlycw6++os+web.browser+web.cordova/plugin.compileTemplatesBatch.os/npm/node_modules/meteor/promise/node_modules/meteor-promise/promise_server.js:116
+      throw error;
+            ^
+ExitWithCode:1
+bogon:ihealth-bp-mantra-demo zhouhongfeng$ 
