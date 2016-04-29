@@ -3,7 +3,6 @@ import RaisedButton from 'material-ui/lib/raised-button'
 import IconButton from 'material-ui/lib/icon-button'
 import ActionHome from 'material-ui/lib/svg-icons/action/home'
 import AvPlayArrow from 'material-ui/lib/svg-icons/av/play-arrow'
-import BpManagerCordova from 'meteor/'
 
 class MeasureBloodPressure extends React.Component{
   render(){
