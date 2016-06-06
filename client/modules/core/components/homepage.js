@@ -12,11 +12,11 @@ const HomePage = ({})=> (
       <div>
         Hey, Kevin<Avatar src="https://avatars3.githubusercontent.com/u/1761809?v=3&s=460" />, Let's
         <RaisedButton label="fly" /> from here. <br/>Yes, I am flying with you now
-
         <List>
           <ListItem primaryText="Measure Blood Pressure" leftIcon={<ContentInbox />} href="/mbp"/>
           <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
           <ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
+          <ListItem primaryText="BPCircle" leftIcon={<ContentInbox />} href="/bpcircle"/>
         </List>
       </div>
     )
