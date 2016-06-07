@@ -7,8 +7,8 @@ import ContentInbox from 'material-ui/lib/svg-icons/content/inbox';
 import ContentSend from 'material-ui/lib/svg-icons/content/send';
 import ActionGrade from 'material-ui/lib/svg-icons/action/grade';
 
-import Button from 'BPCircle';
-import BPCircle from 'BPCircle/components/bpCircle'
+// import Button from 'BPCircle';
+// import BPCircle from 'BPCircle/components/bpCircle'
 
 
 const HomePage = ({})=> (
@@ -22,7 +22,7 @@ const HomePage = ({})=> (
           <ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
         </List>
 
-        <Button>😀 😎 👍 💯</Button>
+        
         {/*<BPCircle />*/}
       </div>
     )

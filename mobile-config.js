@@ -1,7 +1,7 @@
 // This section sets up some basic app metadata,
 // the entire section is optional.
 App.info({
-  id: 'com.ihealthlabs.bp.mantra.demo.android',
+  id: 'com.ihealthlabs.ijiankang.patient.ios',
   // id: 'com.ihealthlabs.bp.mantra.demo.ios',
   name: 'iHealth',
   description: 'iHealth BP Mantra Demo',
