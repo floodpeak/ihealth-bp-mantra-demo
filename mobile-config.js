@@ -16,6 +16,7 @@ App.accessRule('*');
 App.setPreference('StatusBarOverlaysWebView', 'false');
 App.setPreference('StatusBarBackgroundColor', '#008CE0');
 App.setPreference('orientation', 'portrait');
+App.setPreference('SplashScreenDelay', 15);
 
 App.configurePlugin('com.ihealth.plugin.bp.bpmanagercordova', {
   APP_ID: '2015042803',
