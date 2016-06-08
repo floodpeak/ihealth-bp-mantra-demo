@@ -17,9 +17,9 @@
         "react"
     ],
 
-    "extends": "airbnb"
+    "extends": "airbnb",
 
     "rules": {
-      "semi": ["error", "never"]
+        "semi": ["error", "never"]
     }
 }
