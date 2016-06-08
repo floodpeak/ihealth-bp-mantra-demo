@@ -4,6 +4,7 @@ import {mount} from 'react-mounter';
 
 import BPCircle from './containers/bpCircle';
 import MainLayout from '../core/components/main_layout';
+import BPItemList from './containers/bpItemList'
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -12,6 +13,15 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<BPCircle />)
+      });
+    }
+  });
+
+  FlowRouter.route('/bpList', {
+    name: 'bpcircle.list',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<BPItemList />)
       });
     }
   });
