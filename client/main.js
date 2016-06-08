@@ -5,10 +5,12 @@ import initContext from './configs/context';
 
 // modules
 import coreModule from "./modules/core";
+import bpMeasureModule from "./modules/bpMeasure";
 import tableDemoModule from "./modules/tableDemo";
 
 const reducer = combineReducers({
-  ...coreModule.reducers
+  ...coreModule.reducers,
+  ...bpMeasureModule.reducers
 });
 
 
@@ -25,5 +27,6 @@ const context = initContext(configureStore());
 const app = createApp(context);
 // INSERT MODULE
 app.loadModule(coreModule);
+app.loadModule(bpMeasureModule);
 app.loadModule(tableDemoModule);
 app.init();
