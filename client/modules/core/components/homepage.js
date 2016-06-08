@@ -20,6 +20,7 @@ const HomePage = ({})=> (
           <ListItem primaryText="Measure Blood Pressure" leftIcon={<ContentInbox />} href="/mbp"/>
           <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
           <ListItem primaryText="Sent mail" leftIcon={<ContentSend />} />
+          <ListItem primaryText="BPCircle" leftIcon={<ContentInbox />} href='/bpcircle'/>
         </List>
 
       </div>
