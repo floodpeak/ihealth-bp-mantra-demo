@@ -9,28 +9,28 @@ export default {
 
     dispatch(rActions.startDiscovery())
 
-    BP3L.startDiscovery().then((result)=>{
-
-      console.log(result, 'discovery success')
-
-      dispatch(rActions.startConnect());
-
-      return BP3L.startConnect(result && result.deviceDiscovered.address);
-
-    }).then((result)=>{
-
-      console.log(result, 'Connect success')
-      dispatch(rActions.connectSuccess(result.device));
-    })
-    .catch((err)=>{
-      console.log(`Error: ${err}`);
-      console.log(err);
-      if(err.status === 'search_failure') {
-        dispatch(rActions.discoveryFailure());
-      }else {
-        dispatch(rActions.connectFailure());
-      }
-    })
+    // BP3L.startDiscovery().then((result)=>{
+    //
+    //   console.log(result, 'discovery success')
+    //
+    //   dispatch(rActions.startConnect());
+    //
+    //   return BP3L.startConnect(result && result.deviceDiscovered.address);
+    //
+    // }).then((result)=>{
+    //
+    //   console.log(result, 'Connect success')
+    //   dispatch(rActions.connectSuccess(result.device));
+    // })
+    // .catch((err)=>{
+    //   console.log(`Error: ${err}`);
+    //   console.log(err);
+    //   if(err.status === 'search_failure') {
+    //     dispatch(rActions.discoveryFailure());
+    //   }else {
+    //     dispatch(rActions.connectFailure());
+    //   }
+    // })
   },
   startMeasure({ Meteor, ReduxStore }) {
 
