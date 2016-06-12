@@ -6,13 +6,13 @@ import BPCircle from './containers/bpCircle';
 import MainLayout from '../core/components/main_layout';
 import BPItemList from './containers/bpItemList'
 
-export default function (injectDeps, {FlowRouter}) {
+export default function (injectDeps, {FlowRouter,store}) {
   const MainLayoutCtx = injectDeps(MainLayout);
   FlowRouter.route('/bpcircle', {
     name: 'bpcircle.demo',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<BPCircle />)
+        content: () => (<BPCircle store={store} />)
       });
     }
   });
