@@ -3,9 +3,9 @@ import * as rActions from './rActions/bpCircle'
 
 export default {
 
-  discoveryAndConnect({ ReduxStore }) {
+  discoveryAndConnect({ store }) {
 
-    const { dispatch } = ReduxStore;
+    const { dispatch } = store;
 
     dispatch(rActions.startDiscovery())
 
@@ -32,11 +32,11 @@ export default {
     //   }
     // })
   },
-  startMeasure({ Meteor, ReduxStore }) {
+  startMeasure({ Meteor, store }) {
 
-    const { dispatch } = ReduxStore;
+    const { dispatch } = store;
 
-    const { device } = ReduxStore.getState().bpCircle;
+    const { device } = store.getState().bpCircle;
 
     dispatch(rActions.startMeasure());
 

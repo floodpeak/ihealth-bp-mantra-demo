@@ -45,6 +45,9 @@ class BPCircle extends Component {
   }
 
   render() {
+console.log("context is ",this.context);
+console.log("this is ",this);
+
 
     const styles = this.getStyle();
     // DATA
