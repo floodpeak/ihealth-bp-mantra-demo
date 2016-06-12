@@ -8,37 +8,40 @@ import {Provider,connect} from 'react-redux'
 import React from 'react'
 
 
+// ***************************
+// 组件调用mAction的时候
+// 需要传入dispatch和需要用到的rState
+// ***************************
+
 export const depsMapper = (context, actions) => ({
   ...actions.bpCircle,
   context: () => context
 });
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  // console.log("========", state, ownProps)
   return {
     bpState: state.bpCircle
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    actions: bindActionCreators(bpActions, dispatch)
-  };
-};
+// *********************************************************************************
+// connect的默认行为:当没有传递mapDispatchToProps这个参数时,默认传递dispatch到组件的props
+// https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
+// 既然业务逻辑使用mAction, rAction全部使用mAction调用, 没必要把rAction传递进组件
+// *********************************************************************************
 
-const provider = (Component) => {
-  return (props) => {
-    const {context, children, ...nextProps} = props;
-    console.log(context().store.getState());
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     actions: bindActionCreators(bpActions, dispatch)
+//   };
+// };
 
-    return (
-      <div >
-        <Component {...nextProps}>
-          {children}
-        </Component>
-      </div>
-    );
-  };
-};
+
+// ***************************
+// 载入Meteor Data使用composer
+// 并且在props 中获得
+// ***************************
 
 // export const composer = ({ context }, onData) => {
 //   const { store } = context();
@@ -55,7 +58,6 @@ const provider = (Component) => {
 
 export default composeAll(
   // composeWithTracker(composer),
-  connect(mapStateToProps,mapDispatchToProps),
-  // provider,
+  connect(mapStateToProps),
   useDeps(depsMapper)
 )(Component);

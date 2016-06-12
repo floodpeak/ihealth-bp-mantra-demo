@@ -9,6 +9,6 @@ export default function (store) {
     FlowRouter,
     Collections,
     Tracker,
-    store
+    // store
   };
 }
