@@ -6,8 +6,10 @@ import BPCircle from './containers/bpCircle';
 import MainLayout from '../core/components/main_layout';
 import BPItemList from './containers/bpItemList'
 
+import injectProvider from '../core/share/inject-provider'
+
 export default function (injectDeps, {FlowRouter,store}) {
-  const MainLayoutCtx = injectDeps(MainLayout);
+  const MainLayoutCtx = injectProvider(injectDeps,MainLayout);
   FlowRouter.route('/bpcircle', {
     name: 'bpcircle.demo',
     action() {
