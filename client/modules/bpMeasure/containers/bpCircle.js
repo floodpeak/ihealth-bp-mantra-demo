@@ -6,7 +6,7 @@ import * as bpActions from '../actions/rActions/bpCircle';
 import { bindActionCreators } from 'redux';
 import {Provider,connect} from 'react-redux'
 import React from 'react'
-
+import { MAP_STATUS } from '../constants/bpCircle'
 
 // ***************************
 // 组件调用mAction的时候
@@ -19,23 +19,17 @@ export const depsMapper = (context, actions) => ({
 });
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log("========", state, ownProps)
   return {
-    bpState: state.bpCircle
+    bpState: state.bpCircle,
+    bpText: MAP_STATUS[state.bpCircle.status]
   };
 };
 
-// *********************************************************************************
-// connect的默认行为:当没有传递mapDispatchToProps这个参数时,默认传递dispatch到组件的props
-// https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
-// 既然业务逻辑使用mAction, rAction全部使用mAction调用, 没必要把rAction传递进组件
-// *********************************************************************************
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     actions: bindActionCreators(bpActions, dispatch)
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    rActions: bindActionCreators(bpActions, dispatch)
+  };
+};
 
 
 // ***************************
@@ -58,6 +52,6 @@ const mapStateToProps = (state, ownProps) => {
 
 export default composeAll(
   // composeWithTracker(composer),
-  connect(mapStateToProps),
+  connect(mapStateToProps,mapDispatchToProps),
   useDeps(depsMapper)
 )(Component);

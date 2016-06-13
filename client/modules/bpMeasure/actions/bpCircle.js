@@ -1,67 +1,76 @@
 import BP3L from '../../core/share/bp'
-import * as rActions from './rActions/bpCircle'
+
+const discoveryAndConnect = ({ Store }, rActions) => {
+  // rActions come from Component
+
+  rActions.startDiscovery()
+
+  BP3L.startDiscovery().then((result)=>{
+
+    console.log(result, 'discovery success')
+
+    rActions.startConnect();
+
+    return BP3L.startConnect(result && result.deviceDiscovered.address);
+
+  }).then((result)=>{
+
+    console.log(result, 'Connect success')
+    rActions.connectSuccess(result.device);
+  })
+  .catch((err)=>{
+    console.log(`Error: ${err}`);
+    console.log(err);
+    if(err.status === 'search_failure') {
+      rActions.discoveryFailure();
+    }else {
+      rActions.connectFailure();
+    }
+  })
+}
+
+const startMeasure = ({ Meteor, Store },rActions) => {
+
+
+  const { device } = Store.getState().bpCircle;
+
+  rActions.startMeasure();
+
+  const measuring = (MeasuringInfo)=>{
+    rActions.startMeasure(MeasuringInfo && MeasuringInfo.pressure);
+  }
+
+  BP3L.startMeasure(device.address, measuring).then((result)=>{
+    console.log(result, 'Measure Done')
+
+    rActions.measureDone(0);
+
+    let hp = result && result.device.highpressure;
+    let lp = result && result.device.lowpressure;
+    let ht = result && result.device.heartrate;
+
+    console.log(Meteor, hp, lp, ht)
+    Meteor.call('bpMeasure.insert', hp, lp, ht);
+
+  }).catch((err)=>{
+    console.log(err, 'Measure Error')
+  })
+
+
+}
 
 export default {
 
-  discoveryAndConnect({ store }, reduxStore) {
-    // 第一个参数是mantra-context, 第二个是component传参. 如果需要redux-state可以在component传过来
-    const { dispatch } = reduxStore
+  bpEventsHandler(context,rActions){
 
-    // mantra-context 里面还有一个dispatch,但是那个不起作用,这个从component传过来的起作用
-    dispatch(rActions.startDiscovery())
-
-    // BP3L.startDiscovery().then((result)=>{
-    //
-    //   console.log(result, 'discovery success')
-    //
-    //   dispatch(rActions.startConnect());
-    //
-    //   return BP3L.startConnect(result && result.deviceDiscovered.address);
-    //
-    // }).then((result)=>{
-    //
-    //   console.log(result, 'Connect success')
-    //   dispatch(rActions.connectSuccess(result.device));
-    // })
-    // .catch((err)=>{
-    //   console.log(`Error: ${err}`);
-    //   console.log(err);
-    //   if(err.status === 'search_failure') {
-    //     dispatch(rActions.discoveryFailure());
-    //   }else {
-    //     dispatch(rActions.connectFailure());
-    //   }
-    // })
-  },
-  startMeasure({ Meteor, store }) {
-
-    const { dispatch } = store;
-
-    const { device } = store.getState().bpCircle;
-
-    dispatch(rActions.startMeasure());
-
-    const measuring = (MeasuringInfo)=>{
-      console.log(MeasuringInfo, 'Measuring');
-      dispatch(rActions.startMeasure(MeasuringInfo && MeasuringInfo.pressure));
-    }
-
-    BP3L.startMeasure(device.address, measuring).then((result)=>{
-      console.log(result, 'Measure Done')
-
-      dispatch(rActions.measureDone(0));
-
-      let hp = result && result.device.highpressure;
-      let lp = result && result.device.lowpressure;
-      let ht = result && result.device.heartrate;
-
-      console.log(Meteor, hp, lp, ht)
-      Meteor.call('bpMeasure.insert', hp, lp, ht);
-
-    }).catch((err)=>{
-      console.log(err, 'Measure Error')
-    })
-
-
+    const bpMapper = {
+      disconnect: discoveryAndConnect,
+      searching_failure: discoveryAndConnect,
+      ready: startMeasure,
+      measureDone: startMeasure
+    };
+    const {Store} = context
+    const status = Store.getState().bpCircle.status
+    bpMapper[status] && bpMapper[status](context,rActions)
   }
 };

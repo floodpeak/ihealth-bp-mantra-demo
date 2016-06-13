@@ -10,3 +10,14 @@ export const DISCONNECT = 'DISCONNECT';
 export const START_MEASURE = 'START_MEASURE';
 export const STOP_MEASURE = 'STOP_MEASURE';
 export const MEASURE_DONE = 'MEASURE_DONE';
+
+export const MAP_STATUS = {
+  'disconnect': '点击搜索血压计',
+  'searching': '正在搜索血压计',
+  'searching_failure': '未找到设备',
+  'connecting': '正在连接血压计',
+  'ready': '开始测量',
+  'connect_failure': '血压计连接失败，请重试',
+  'measuring': '血压指数',
+  'measureDone': '测量完成'
+}
