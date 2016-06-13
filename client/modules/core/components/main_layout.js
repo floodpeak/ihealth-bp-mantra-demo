@@ -1,19 +1,22 @@
-import React from 'react';
+import React from 'react'
+import { Provider } from 'react-redux'
 
-const Layout = ({content = () => null }) => (
-  <div>
-    <header>
-    <h1>iHealth BP Mantra Demo</h1>
-    </header>
+import store from '../../../configs/reduxContext'
 
+const Layout = ({ content = () => null }) => (
+  <Provider store={store()}>
     <div>
-    {content()}
+      <header>
+      <h1>iHealth BP Mantra Demo</h1>
+      </header>
+      <div>
+      {content()}
+      </div>
+      <footer>
+      <small>Built with <a href="/">Home</a> &amp;</small>
+      </footer>
     </div>
+  </Provider>
+)
 
-    <footer>
-    <small>Built with <a href='/'>Home</a> &amp;</small>
-    </footer>
-  </div>
-);
-
-export default Layout;
+export default Layout

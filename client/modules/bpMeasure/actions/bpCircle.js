@@ -3,10 +3,11 @@ import * as rActions from './rActions/bpCircle'
 
 export default {
 
-  discoveryAndConnect({ store }) {
+  discoveryAndConnect({ store }, reduxStore) {
+    // 第一个参数是mantra-context, 第二个是component传参. 如果需要redux-state可以在component传过来
+    const { dispatch } = reduxStore
 
-    const { dispatch } = store;
-
+    // mantra-context 里面还有一个dispatch,但是那个不起作用,这个从component传过来的起作用
     dispatch(rActions.startDiscovery())
 
     // BP3L.startDiscovery().then((result)=>{

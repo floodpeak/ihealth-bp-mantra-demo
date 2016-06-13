@@ -12,7 +12,7 @@ export default function (injectDeps, {FlowRouter,store}) {
     name: 'bpcircle.demo',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<BPCircle store={store} />)
+        content: () => (<BPCircle />)
       });
     }
   });

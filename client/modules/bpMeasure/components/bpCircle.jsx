@@ -45,13 +45,10 @@ class BPCircle extends Component {
   }
 
   render() {
-console.log("context is ",this.context);
-console.log("this is ",this);
-
-
     const styles = this.getStyle();
     // DATA
-    const { bpState } = this.props;
+    const { bpState, actions, dispatch } = this.props;
+
     // Mantra Actions
     const { discoveryAndConnect, startMeasure } = this.props;
 
@@ -60,21 +57,22 @@ console.log("this is ",this);
     //   startMeasure(bpState.device)
     // }
 
-
-    const bpHanderClick = {
+    const bpMapper = {
       disconnect: discoveryAndConnect,
       searching_failure: discoveryAndConnect,
       ready: startMeasure,
       measureDone: startMeasure
     };
 
+    const mActionMapper = (bpState) => {
+      bpState in ['disconnect','searching_failure'] ? discoveryAndConnect() : startMeasure()
+    }
 
-
-    return <div style={styles.circle} onClick={bpHanderClick[bpState.status]}>
+    // Todo: 根据现有bpState切换onClick功能,并传递参数给mAction
+    return <div style={styles.circle} onClick={() => discoveryAndConnect({store: {bpState},dispatch})}>
       {this.renderStatus()}
     </div>
   }
-
 }
 
 
