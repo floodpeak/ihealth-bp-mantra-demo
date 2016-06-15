@@ -5,6 +5,6 @@
 // actions inside this directory.
 const actions = {
   // ACTION
-};
+}
 
-export default actions;
+export default actions

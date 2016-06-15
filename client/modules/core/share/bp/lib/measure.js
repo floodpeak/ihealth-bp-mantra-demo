@@ -1,9 +1,9 @@
 
 import * as utils from './common'
 
-const Appsecret = utils.getAppsecret();
+const Appsecret = utils.getAppsecret()
 
-export default function startMeasure(macId, measureDoingCB){
+export default function startMeasure(macId, measureDoingCB) {
 
 
   return new Promise((resolve, reject) =>{

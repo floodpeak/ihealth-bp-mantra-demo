@@ -9,15 +9,19 @@
     "React": true
   },
 
-  "ecmaFeatures": {
-    "jsx": true
-  },
-
   "plugins": [
     "react"
   ],
 
   "extends": "airbnb",
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
 
   "rules": {
     "semi": ["error", "never"]

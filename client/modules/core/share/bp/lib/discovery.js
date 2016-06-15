@@ -1,6 +1,5 @@
-
 import * as utils from './common'
-const Appsecret = utils.getAppsecret();
+const Appsecret = utils.getAppsecret()
 
 export default function discovery() {
 

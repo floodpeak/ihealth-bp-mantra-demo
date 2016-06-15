@@ -1,6 +1,6 @@
-import Discovery from './lib/discovery';
-import Connect from './lib/connect';
-import Measure from './lib/measure';
+import Discovery from './lib/discovery'
+import Connect from './lib/connect'
+import Measure from './lib/measure'
 const BP3L = {}
 
 BP3L.startDiscovery = Discovery
