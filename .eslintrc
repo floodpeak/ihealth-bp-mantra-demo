@@ -9,12 +9,6 @@
     "React": true
   },
 
-  "plugins": [
-    "react"
-  ],
-
-  "extends": "airbnb",
-
   "parserOptions": {
     "ecmaVersion": 6,
     "ecmaFeatures": {
@@ -22,6 +16,11 @@
       "jsx": true
     }
   },
+  "plugins": [
+    "react"
+  ],
+
+  "extends": "airbnb",
 
   "rules": {
     "semi": ["error", "never"]

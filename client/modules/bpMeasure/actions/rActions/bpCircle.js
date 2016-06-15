@@ -1,59 +1,58 @@
-import * as types from '../../constants/bpCircle';
+import * as types from '../../constants/bpCircle'
 
 export function startDiscovery() {
-
   return {
-    type: types.START_DISCOVERY
+    type: types.START_DISCOVERY,
   }
 }
 
 export function discoveryFailure() {
   return {
-    type: types.DISCOVERY_FAILURE
+    type: types.DISCOVERY_FAILURE,
   }
 }
 
 export function startConnect() {
   return {
-    type: types.START_CONNECT
+    type: types.START_CONNECT,
   }
 }
 
 export function connectSuccess(device = {}) {
   return {
     type: types.CONNECT_SUCCESS,
-    device
+    device,
   }
 }
 
 export function connectFailure() {
   return {
-    type: types.CONNECT_FAILURE
+    type: types.CONNECT_FAILURE,
   }
 }
 
-export function disConnect(){
+export function disConnect() {
   return {
-    type: types.DISCONNECT
+    type: types.DISCONNECT,
   }
 }
 
 export function stopDiscovery() {
   return {
-    type: types.STOP_DISCOVERY
+    type: types.STOP_DISCOVERY,
   }
 }
 
 export function startMeasure(measureValue = 0) {
   return {
     type: types.START_MEASURE,
-    measureValue
+    measureValue,
   }
 }
 
 export function measureDone(measureValue = 0) {
   return {
     type: types.MEASURE_DONE,
-    measureValue
+    measureValue,
   }
 }

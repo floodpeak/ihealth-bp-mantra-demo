@@ -1,24 +1,24 @@
 import {
-  useDeps, composeWithTracker, composeAll
-} from 'mantra-core';
+  useDeps, composeWithTracker, composeAll,
+} from 'mantra-core'
 
-import Component from '../components/bpItemList.jsx';
+import Component from '../components/bpItemList.jsx'
 
 
-export const composer = ({context, clearErrors}, onData) => {
-  const { Meteor, Collections } = context();
-  if (Meteor.subscribe("bpList").ready()) {
+export const composer = ({ context, clearErrors }, onData) => {
+  const { Meteor, Collections } = context()
+  if (Meteor.subscribe('bpList').ready()) {
 
-    const BPMeasures = Collections.BPMeasures.find().fetch();
-    onData(null, {BPMeasures});
+    const BPMeasures = Collections.BPMeasures.find().fetch()
+    onData(null, { BPMeasures })
   } else {
-    onData();
+    onData()
   }
 
-  return clearErrors;
-};
+  return clearErrors
+}
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps()
-)(Component);
+)(Component)

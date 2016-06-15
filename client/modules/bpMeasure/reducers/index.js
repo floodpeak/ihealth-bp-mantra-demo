@@ -1,3 +1,3 @@
-import bpCircle from './bpCircle';
+import bpCircle from './bpCircle'
 
-export default Object.assign({}, { bpCircle });
+export default Object.assign({}, { bpCircle })

@@ -1,11 +1,10 @@
 import {
-  useDeps, composeWithTracker, composeAll
-} from 'mantra-core';
-import Component from 'BPCircle1';
-import * as bpActions from '../actions/rActions/bpCircle';
-import { bindActionCreators } from 'redux';
-import {Provider,connect} from 'react-redux'
-import React from 'react'
+  useDeps, composeAll,
+} from 'mantra-core'
+import Component from 'BPCircle1'
+import * as bpActions from '../actions/rActions/bpCircle'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import { MAP_STATUS } from '../constants/bpCircle'
 
 // ***************************
@@ -15,21 +14,17 @@ import { MAP_STATUS } from '../constants/bpCircle'
 
 export const depsMapper = (context, actions) => ({
   ...actions.bpCircle,
-  context: () => context
-});
+  context: () => context,
+})
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    bpState: state.bpCircle,
-    bpText: MAP_STATUS[state.bpCircle.status]
-  };
-};
+const mapStateToProps = (state) => ({
+  bpState: state.bpCircle,
+  bpText: MAP_STATUS[state.bpCircle.status],
+})
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    rActions: bindActionCreators(bpActions, dispatch)
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  rActions: bindActionCreators(bpActions, dispatch),
+})
 
 
 // ***************************
@@ -52,6 +47,6 @@ const mapDispatchToProps = (dispatch) => {
 
 export default composeAll(
   // composeWithTracker(composer),
-  connect(mapStateToProps,mapDispatchToProps),
+  connect(mapStateToProps, mapDispatchToProps),
   useDeps(depsMapper)
-)(Component);
+)(Component)

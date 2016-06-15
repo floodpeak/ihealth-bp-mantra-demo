@@ -1,12 +1,13 @@
+const { describe, it } = global
 import { expect } from 'chai'
 import * as types from '../../../constants/bpCircle'
 import * as rActions from '../bpCircle'
 
-describe('bpCircle rAction',() => {
+describe('bpCircle rAction', () => {
   describe('startDiscovery', () => {
     it('should create START_DISCOVERY action', () => {
       expect(rActions.startDiscovery()).to.deep.equal({
-        type: types.START_DISCOVERY
+        type: types.START_DISCOVERY,
       })
     })
   })
@@ -14,7 +15,7 @@ describe('bpCircle rAction',() => {
   describe('discoveryFailure', () => {
     it('should create DISCOVERY_FAILURE action', () => {
       expect(rActions.discoveryFailure()).to.deep.equal({
-        type: types.DISCOVERY_FAILURE
+        type: types.DISCOVERY_FAILURE,
       })
     })
   })
@@ -22,7 +23,7 @@ describe('bpCircle rAction',() => {
   describe('startConnect', () => {
     it('should create START_CONNECT action', () => {
       expect(rActions.startConnect()).to.deep.equal({
-        type: types.START_CONNECT
+        type: types.START_CONNECT,
       })
     })
   })
@@ -35,7 +36,7 @@ describe('bpCircle rAction',() => {
       }
       expect(rActions.connectSuccess(device)).to.deep.equal({
         type: types.CONNECT_SUCCESS,
-        device
+        device,
       })
     })
   })
@@ -43,7 +44,7 @@ describe('bpCircle rAction',() => {
   describe('connectFailure', () => {
     it('should create CONNECT_FAILURE action', () => {
       expect(rActions.connectFailure()).to.deep.equal({
-        type: types.CONNECT_FAILURE
+        type: types.CONNECT_FAILURE,
       })
     })
   })
@@ -51,7 +52,7 @@ describe('bpCircle rAction',() => {
   describe('disConnect', () => {
     it('should create DISCONNECT action', () => {
       expect(rActions.disConnect()).to.deep.equal({
-        type: types.DISCONNECT
+        type: types.DISCONNECT,
       })
     })
   })
@@ -59,7 +60,7 @@ describe('bpCircle rAction',() => {
   describe('stopDiscovery', () => {
     it('should create STOP_DISCOVERY action', () => {
       expect(rActions.stopDiscovery()).to.deep.equal({
-        type: types.STOP_DISCOVERY
+        type: types.STOP_DISCOVERY,
       })
     })
   })
@@ -68,7 +69,7 @@ describe('bpCircle rAction',() => {
     it('should create START_MEASURE action', () => {
       expect(rActions.startMeasure()).to.deep.equal({
         type: types.START_MEASURE,
-        measureValue: 0
+        measureValue: 0,
       })
     })
   })
@@ -77,7 +78,7 @@ describe('bpCircle rAction',() => {
     it('should create MEASURE_DONE action', () => {
       expect(rActions.measureDone()).to.deep.equal({
         type: types.MEASURE_DONE,
-        measureValue: 0
+        measureValue: 0,
       })
     })
   })
