@@ -1,11 +1,10 @@
 export function parseJSON(str) {
   try {
-		var json = JSON.parse(str)
-		return json
-	} catch (err) {
-		console.warn('parseJSON' + err)
-	}
-	return {}
+    const json = JSON.parse(str)
+    return json
+  } catch (err) {
+    console.error('parseJSON err')
+  }
 }
 
 export function getAppsecret() {

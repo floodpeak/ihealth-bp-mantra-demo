@@ -1,18 +1,17 @@
-import {Meteor} from 'meteor/meteor';
-import {check} from 'meteor/check';
+import { Meteor } from 'meteor/meteor'
+// import { check } from 'meteor/check'
 
-import {tableDemoColl} from '/lib/collections';
+import { tableDemoColl } from '/lib/collections'
 
 export default function () {
-  console.log("publish functio called");
-  Meteor.publish('tableDemoData', function () {
-    const selector = {};
+  Meteor.publish('tableDemoData', () => {
+    const selector = {}
     const options = {
       // fields: {_id: 1, title: 1},
       // sort: {createdAt: -1},
       // limit: 10
-    };
+    }
 
-    return tableDemoColl.find(selector, options);
-  });
+    return tableDemoColl.find(selector, options)
+  })
 }

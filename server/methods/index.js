@@ -1,5 +1,5 @@
-import bpMeasure from './bpMeasure';
+import bpMeasure from './bpMeasure'
 
 export default function () {
-  bpMeasure();
+  bpMeasure()
 }

@@ -1,33 +1,31 @@
 
 import * as utils from './common'
-
+const { BpManagerCordova } = global
 const Appsecret = utils.getAppsecret()
 
 export default function startMeasure(macId, measureDoingCB) {
 
 
-  return new Promise((resolve, reject) =>{
+  return new Promise((resolve, reject) => {
 
-    BpManagerCordova.startMeasure((res)=>{
+    BpManagerCordova.startMeasure((res) => {
 
-      const device = utils.parseJSON(res);
+      const device = utils.parseJSON(res)
 
-      if(device && device.msg == 'MeasureDoing') {
+      if (device && device.msg === 'MeasureDoing') {
 
         // change the state outside
-        measureDoingCB(device);
+        measureDoingCB(device)
 
-      }else if(device && device.msg == 'MeasureDone') {
-        resolve({msg: 'MeasureDone', device });
-      }else if(device && device.msg=='Error'){
-  		  reject({errMsg: 'Measure failure', status:'measure_failure'})
-  		}
+      } else if (device && device.msg === 'MeasureDone') {
+        resolve({ msg: 'MeasureDone', device })
+      } else if (device && device.msg === 'Error') {
+        reject({ errMsg: 'Measure failure', status: 'measure_failure' })
+      }
 
-    }, (err)=> {
-
-      reject(err);
-      console.log('Cordvoa Error: ', err)
-
+    }, (err) => {
+      reject(err)
+      console.error('Cordvoa Error: ', err)
     }, Appsecret, macId)
   })
 

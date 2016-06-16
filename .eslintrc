@@ -23,6 +23,10 @@
   "extends": "airbnb",
 
   "rules": {
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "padded-blocks": 0,
+    "callback-return": 2,
+    "consistent-return": 0,
+    "no-console": ["error", { allow: ["warn", "error"] }]
   }
 }
